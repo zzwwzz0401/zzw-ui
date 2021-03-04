@@ -8,6 +8,7 @@
       <strong>hello</strong>
       <div>hi</div>
     </template>
+    
   </Dialog>
 
   <Botton @click="showDialog">showDialog</Botton>
