@@ -1,6 +1,4 @@
-<demo>
-常规用法
-</demo>
+<demo>基本使用</demo>
 
 <template>
   <Switch v-model:value="open_flag"></Switch>

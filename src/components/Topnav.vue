@@ -2,12 +2,16 @@
   <div class="topnav">
     <router-link to="/" class="logo">
       <svg class="icon">
-        <use xlink:href="#icon-king"></use>
+        <use xlink:href="#icon-home"></use>
       </svg>
     </router-link>
     <ul class="menu">
       <li>
-        <router-link to="/doc/intro">文档</router-link>
+        <router-link to="/doc/intro" class="logo">
+          <svg class="icon">
+            <use xlink:href="#icon-document"></use>
+          </svg>
+        </router-link>
       </li>
     </ul>
     <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu">
@@ -22,8 +26,8 @@ export default {
   props: {
     toggleMenuButtonVisible: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   setup() {
     const menuVisible = inject<Ref<boolean>>("menuVisible");
@@ -67,6 +71,15 @@ $color: #007974;
 
     > li {
       margin: 0 1em;
+      > .logo {
+        max-width: 6em;
+        margin-right: auto;
+
+        > svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
     }
   }
 

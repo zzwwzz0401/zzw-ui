@@ -15,10 +15,10 @@
 </template>
 
 <script lang="ts">
-import Button from "../lib/Botton.vue";
+import Button from "../lib/Button.vue";
 import "prismjs";
 import "prismjs/themes/prism.css";
-import { computed, onMounted, ref, watchEffect } from "vue";
+import { computed, ref } from "vue";
 const Prism = (window as any).Prism;
 export default {
   components: {
@@ -38,78 +38,6 @@ export default {
     const showCode = () => (codeVisible.value = true);
     const hideCode = () => (codeVisible.value = false);
     const codeVisible = ref(false);
-
-    // const setupTypewriter = (t) => {
-    //   let HTML = t.innerHTML;
-    //   t.innerHTML = "";
-    //   let cursorPosition = 0,
-    //     tag: any = "",
-    //     writingTag = false,
-    //     tagOpen = false,
-    //     typeSpeed = 100,
-    //     tempTypeSpeed = 0;
-    //   let type = function () {
-    //     if (writingTag === true) {
-    //       tag += HTML[cursorPosition];
-    //     }
-    //     if (HTML[cursorPosition] === "<") {
-    //       tempTypeSpeed = 0;
-    //       if (tagOpen) {
-    //         tagOpen = false;
-    //         writingTag = true;
-    //       } else {
-    //         tag = "";
-    //         tagOpen = true;
-    //         writingTag = true;
-    //         tag += HTML[cursorPosition];
-    //       }
-    //     }
-    //     if (!writingTag && tagOpen) {
-    //       tag.innerHTML += HTML[cursorPosition];
-    //     }
-    //     if (!writingTag && !tagOpen) {
-    //       if (HTML[cursorPosition] === " ") {
-    //         tempTypeSpeed = 0;
-    //       } else {
-    //         tempTypeSpeed = Math.random() * typeSpeed + 50;
-    //       }
-    //       t.innerHTML += HTML[cursorPosition];
-    //     }
-    //     if (writingTag === true && HTML[cursorPosition] === ">") {
-    //       tempTypeSpeed = Math.random() * typeSpeed + 50;
-    //       writingTag = false;
-    //       if (tagOpen) {
-    //         let newSpan = document.createElement("span");
-    //         t.appendChild(newSpan);
-    //         newSpan.innerHTML = tag;
-    //         tag = newSpan.firstChild;
-    //       }
-    //     }
-    //     cursorPosition += 1;
-    //     if (cursorPosition < HTML.length - 1) {
-    //       setTimeout(type, tempTypeSpeed);
-    //     }
-    //   };
-
-    //   return {
-    //     type: type,
-    //   };
-    // };
-    // onMounted(() => {
-    //   watchEffect(
-    //     () => {
-    //       let typer: any = document.getElementById("typewriter");
-    //       console.log("typer", typer);
-    //       if(!typer) return
-          
-    //       typer = setupTypewriter(typer);
-    //       typer.type();
-    //     },
-    //     {
-    //       flush: "post",
-    //     }
-    //   );
-    // });
 
     return {
       Prism,

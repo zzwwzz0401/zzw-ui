@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import Botton from "./Botton.vue";
+import Botton from "./Button.vue";
 export default {
   components: { Botton },
   props: {

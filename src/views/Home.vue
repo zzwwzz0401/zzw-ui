@@ -2,12 +2,13 @@
   <div class="topNav">
     <Topnav />
     <div class="banner">
-      <h1>UI</h1>
-      <h2>框架</h2>
+      <h1>VITE-UI</h1>
+      <!-- <h2>框架</h2> -->
       <p class="actions">
-        <a href="https://github.com/zzwwzz0401/zzw-ui.git">github</a>
+        <a href="https://github.com/zzwwzz0401/vite-ui.git">github</a>
         <router-link to="/doc/intro">开始</router-link>
       </p>
+      <p class="typewrite">CREATED BY ZZW</p>
     </div>
   </div>
   <div class="features">
@@ -50,6 +51,27 @@ export default {
 $green: #02bcb0;
 $border-radius: 4px;
 $color: #007974;
+.typewrite {
+  font: 200% monospace;
+  border-right: 0.08em solid;
+  width: 14ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(14, end),
+    blink-caret 1s step-end infinite alternate; //这里的alternate是为了让光标闪烁的正常一点
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .topNav {
   animation: theme 10s linear infinite;
   clip-path: ellipse(80% 60% at 50% 40%);
@@ -127,7 +149,7 @@ $color: #007974;
   flex-direction: column;
 
   > .actions {
-    padding: 8px 0;
+    padding: 20px 0;
 
     a {
       margin: 0 8px;
