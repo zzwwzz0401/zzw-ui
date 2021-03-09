@@ -2,10 +2,10 @@
   <div class="topNav">
     <Topnav />
     <div class="banner">
-      <h1>VITE-UI</h1>
+      <h1>ZZW-UI</h1>
       <!-- <h2>框架</h2> -->
       <p class="actions">
-        <a href="https://github.com/zzwwzz0401/vite-ui.git">github</a>
+        <a href="https://github.com/zzwwzz0401/zzw-ui">github</a>
         <router-link to="/doc/intro">开始</router-link>
       </p>
       <p class="typewrite">CREATED BY ZZW</p>

@@ -13,8 +13,8 @@
             <slot name="content" />
           </main>
           <footer>
-            <Botton level="main" @click="onAffirm">Affirm</Botton>
-            <Botton @click="onCancel">Cancel</Botton>
+            <Button level="main" @click="onAffirm">Affirm</Button>
+            <Button @click="onCancel">Cancel</Button>
           </footer>
         </div>
       </div>
@@ -23,9 +23,9 @@
 </template>
 
 <script lang="ts">
-import Botton from "./Button.vue";
+import Button from "./Button.vue";
 export default {
-  components: { Botton },
+  components: { Button },
   props: {
     //打开关闭
     visible: {
@@ -56,12 +56,12 @@ export default {
       context.emit("update:visible", false);
     };
     const onAffirm = () => {
-      if (props.Affirm?.() !== false) {
+      if (props.Affirm && props.Affirm() !== false) {
         close();
       }
     };
     const onCancel = () => {
-      if (props.Cancel?.() !== false) {
+      if (props.Cancel && props.Cancel() !== false) {
         close();
       }
     };

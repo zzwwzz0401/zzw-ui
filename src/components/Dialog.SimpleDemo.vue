@@ -1,15 +1,15 @@
 <demo>简易开启Dialog</demo>
 
 <template>
-  <Botton @click="showDialog">showDialog</Botton>
+  <Button @click="showDialog">showDialog</Button>
 </template>
 
 <script lang="ts">
-import Botton from "../lib/Button.vue";
+import Button from "../lib/Button.vue";
 import { h } from "vue";
 import { openDialog } from "../lib/openDialog";
 export default {
-  components: { Botton },
+  components: { Button },
   setup() {
     const showDialog = () => {
       openDialog({

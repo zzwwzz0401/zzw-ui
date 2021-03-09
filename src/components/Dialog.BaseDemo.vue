@@ -1,7 +1,7 @@
 <demo>基本使用</demo>
 
 <template>
-  <Botton @click="toggle">toggle</Botton>
+  <Button @click="toggle">toggle</Button>
   <Dialog v-model:visible="visible_flag" :Affirm="onAffirm" :Cancel="onCancel">
     <template v-slot:title>
       <strong>标题</strong>
@@ -15,10 +15,10 @@
 
 <script lang="ts">
 import Dialog from "../lib/Dialog.vue";
-import Botton from "../lib/Button.vue";
+import Button from "../lib/Button.vue";
 import { ref } from "vue";
 export default {
-  components: { Dialog, Botton },
+  components: { Dialog, Button },
   setup() {
     const visible_flag = ref(false);
     const toggle = () => {

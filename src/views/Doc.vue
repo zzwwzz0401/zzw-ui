@@ -21,7 +21,7 @@
             <router-link to="/doc/switch">Switch 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/botton">Botton 组件</router-link>
+            <router-link to="/doc/button">Button 组件</router-link>
           </li>
           <li>
             <router-link to="/doc/dialog">Dialog 组件</router-link>
@@ -102,14 +102,14 @@ aside {
 
   > h2 {
     margin-bottom: 4px;
-    padding: 0 16px;
+    padding: 6px 16px;
   }
 
   > ol {
     > li {
       > a {
         display: block;
-        padding: 4px 16px;
+        padding: 8px 16px;
         text-decoration: none;
       }
 
