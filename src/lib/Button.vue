@@ -11,7 +11,7 @@ export default {
   props: {
     theme: {
       type: String,
-      default: "button", 
+      default: "button",
     },
     size: {
       type: String,
