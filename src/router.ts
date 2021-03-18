@@ -9,6 +9,7 @@ import Intro from './markdown/intro.md'
 import Start from './markdown/start.md'
 import Install from './markdown/install.md'
 import Markdown from './components/Markdown.vue'
+import StarsDemo from './components/StarsDemo.vue'
 import { h } from 'vue'
 const md = string => h(Markdown, { content: string, key: string })
 const history = createWebHashHistory()
@@ -24,9 +25,15 @@ export const router = createRouter({
                 { path: 'switch', component: SwitchDemo },
                 { path: 'button', component: ButtonDemo },
                 { path: 'dialog', component: DialogDemo },
-                { path: 'tabs', component: TabsDemo }
+                { path: 'tabs', component: TabsDemo },
+                { path: 'stars', component: StarsDemo },
             ]
         }
     ]
 })
 
+router.beforeEach((to, form, next) => {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+    next()
+})
